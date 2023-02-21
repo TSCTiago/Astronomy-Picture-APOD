@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/footer.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>APOD</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Picture Of The Day</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/modal.css" />
     <link
@@ -15,20 +16,21 @@
 </head>
 
 <body>
-    
-    <div class="grid md:grid-cols-4 md:gap-4 row">
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 md:gap-4 row">
 
 
     </div>
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
-        <div class="modal-content">
+        <div class="modal-content ">
             <span class="close">&#10007;</span>
             <div>
-                <img id="img-singular" src="" alt="NASA Picture Of The Day">
+                <img id="img-singular" class="blue" src="" alt="NASA Picture Of The Day" style="display: none;">
+                <iframe id="video-singular" width="800" height="400" src="" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display: none;"></iframe>
             </div>
-            <h1 ><span class="titles">Title: </span><span id="title-singular"></span></h1>
+            <h1><span class="titles">Title: </span><span id="title-singular"></span></h1>
             <h3><span class="titles">Date: </span> <span id="date-singular"></span></h3>
             <p><span class="titles">Explanation: </span> <span id="explanation-singular"></span></p>
             <p><span class="titles">Copyright: </span> <span id="copyright-singular"></span></p>
@@ -37,28 +39,20 @@
 
     </div>
 
-
-
-
-
-
     <div class="footer" id="footer">
         <div class="items">
             <a class="item nasa" href="https://www.nasa.gov/" target="_blank">
-                <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png" />
+                <img class="image" src="img/footer/nasa.png" />
             </a>
-            <a class="item instagram" href="https://www.instagram.com/programandosolucoes/" target="_blank">
-                <img class="image" src="footerimages/instagram.png" />
+            <a class="item git-hub" href="https://github.com/TSCTiago" target="_blank">
+                <img class="image" src="img/footer/git.png" />
             </a>
-            <a class="item blog" href="http://programandosolucoes.dev.br/" target="_blank">
-                <img class="image" src="footerimages/logo_150x150.png" />
+            <a class="item linkedin" href="https://www.linkedin.com/in/tiago-silva-carvalho-2b6244223/" target="_blank">
+                <img class="image" src="img/footer/linkedin.png" />
             </a>
         </div>
+        
     </div>
-
-
-
-
 
     <script src="scripts/index.js"></script>
 </body>
