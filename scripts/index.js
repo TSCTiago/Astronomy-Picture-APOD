@@ -93,6 +93,7 @@ function makeExplanation(response) {
     if (!response.hdurl) {
         url = response.url
         video.style.display = 'block'
+        img.style.display = 'none'
         video.src = url
 
 
@@ -100,6 +101,7 @@ function makeExplanation(response) {
     else {
         url = response.hdurl
         img.style.display = 'block'
+        video.style.display = 'none'
         img.src = url
 
     }
