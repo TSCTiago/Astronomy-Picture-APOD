@@ -1,0 +1,48 @@
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.refresh {
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+    padding: 8px;
+    border: 0;
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    /* margin: 0 auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refresh .icon {
+    fill: #323232;
+}
+
+.refresh:hover {
+    background: #def4d7;
+    cursor: pointer;
+}
+
+.refresh:active .icon {
+    fill: #5ac938;
+}
+
+.refresh.loading {
+    background: #def4d7;
+    cursor: wait;
+}
+
+.refresh.loading .icon {
+    fill: #5ac938;
+    animation: rotating 1.2s linear infinite;
+}

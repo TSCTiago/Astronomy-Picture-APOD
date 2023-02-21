@@ -87,17 +87,17 @@ function makeExplanation(response) {
     clearFields()
 
     let url = ''
-    const video =  document.getElementById("video-singular")
-    const img =   document.getElementById("img-singular")
+    const video = document.getElementById("video-singular")
+    const img = document.getElementById("img-singular")
 
-    if(!response.hdurl){
+    if (!response.hdurl) {
         url = response.url
         video.style.display = 'block'
         video.src = url
 
 
     }
-    else{
+    else {
         url = response.hdurl
         img.style.display = 'block'
         img.src = url
@@ -156,3 +156,12 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+const refreshButton = document.querySelector('.refresh');
+
+refreshButton.addEventListener('click', function() {
+this.classList.toggle('loading');
+setTimeout(function() {
+location.reload(true);
+}, 1000);
+});
